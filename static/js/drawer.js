@@ -17,8 +17,10 @@ let startDrawing = (event) => {
   getPosition(event);
 };
 
-let stopDrawing = () => {
+let stopDrawing = (event) => {
   canDraw = false;
+  console.log(event.target)
+  predict(event.target)
 };
 
 let drawAtCanvas = (event) => {
@@ -40,9 +42,9 @@ let cleanCanvas = () => {
 };
 
 window.addEventListener('load', () => {
-  document.addEventListener('mousedown', startDrawing);
-  document.addEventListener('mouseup', stopDrawing);
-  document.addEventListener('mousemove', drawAtCanvas);
+  drawCanvas.addEventListener('mousedown', startDrawing);
+  drawCanvas.addEventListener('mouseup', stopDrawing);
+  drawCanvas.addEventListener('mousemove', drawAtCanvas);
 });
 
 clearCanvasBtn.addEventListener('click', cleanCanvas);

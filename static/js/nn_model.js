@@ -23,7 +23,7 @@ function predict(rawCanvas) {
   }
 }
 
-async () => {
+(async () => {
   window.model = await tf.loadLayersModel('model/model.json');
   console.log('Neural network model loaded!');
-};
+})();
