@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Handwriting-digits-go</title>
     <link rel="stylesheet" href="static/css/style.css" />
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
   </head>
   <body>
     <main>
@@ -13,7 +14,24 @@
         <h1>Handwriting digits Go</h1>
         <h2>Draw any number and this website will predict it!</h2>
         <h3>Created by jvillegasd</h3>
-        <a target="_blank" href="https://github.com/Jvillegasd">Github</a>
+        <div class="github-buttons">
+          <a
+            class="github-button"
+            href="https://github.com/Jvillegasd/handwriting-digits-go"
+            data-icon="octicon-star"
+            data-show-count="true"
+            aria-label="Star Jvillegasd/handwriting-digits-go on GitHub"
+            >Star</a
+          >
+          <a
+            class="github-button"
+            href="https://github.com/Jvillegasd/handwriting-digits-go/fork"
+            data-icon="octicon-repo-forked"
+            data-show-count="true"
+            aria-label="Fork Jvillegasd/handwriting-digits-go on GitHub"
+            >Fork</a
+          >
+        </div>
       </header>
       <div class="card">
         <span>Draw your number here</span>
@@ -25,5 +43,6 @@
 
     <script src="static/js/drawer.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+    <script src="static/js/dl_model.js"></script>
   </body>
 </html>
