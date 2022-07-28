@@ -6,22 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Handwriting-digits-go</title>
     <link rel="stylesheet" href="static/css/style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
   </head>
   <body>
     <main>
       <header>
-        <h1>Handwritin digits Go</h1>
+        <h1>Handwriting digits Go</h1>
         <h2>Draw any number and this website will predict it!</h2>
         <h3>Created by jvillegasd</h3>
         <a href="https://github.com/Jvillegasd">Github</a>
       </header>
       <div class="card">
         <span>Draw your number here</span>
-        <canvas id="draw_canvas"></canvas>
+        <canvas width="200" height="200" id="draw_canvas"></canvas>
         <button>Clear canvas</button>
         <span>Hint: Draw slowly</span>
       </div>
     </main>
+
+    <script src="static/js/drawer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
   </body>
 </html>
