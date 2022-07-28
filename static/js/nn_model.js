@@ -1,16 +1,10 @@
 const preprocessImage = (rawCanvas) => {
-  /*
-    Resource:
-    
-    https://gist.github.com/bensonruan/975912eae1fefe84984e4b5a7662e0c0
-  */
   let tensor = tf.browser
-    .fromPixels(rawCanvas)
+    .fromPixels(rawCanvas, numChannels=1)
     .resizeNearestNeighbor([28, 28])
-    .mean(2)
-    .expandDims(2)
-    .expandDims()
+    .reshape([1, 28 * 28])
     .toFloat();
+  
   return tensor.div(255.0);
 };
 
