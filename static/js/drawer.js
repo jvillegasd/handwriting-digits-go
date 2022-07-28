@@ -1,7 +1,7 @@
 let canDraw = false;
 const LINE_WIDTH = 5;
 const LINE_CAP = 'round';
-const STROKE_STYLE = 'black';
+const STROKE_STYLE = 'white';
 const mouseCoords = { x: 0, y: 0 };
 const drawCanvas = document.getElementById('draw_canvas');
 const clearCanvasBtn = document.getElementById('clean_btn');

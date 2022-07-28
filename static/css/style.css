@@ -26,6 +26,7 @@ main {
 #draw_canvas {
   border: solid 2px gray;
   border-radius: 10px;
+  background-color: black;
 }
 
 #clean_btn {
