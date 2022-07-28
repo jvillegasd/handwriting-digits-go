@@ -4,13 +4,8 @@ const LINE_CAP = 'round';
 const STROKE_STYLE = 'black';
 const mouseCoords = { x: 0, y: 0 };
 const drawCanvas = document.getElementById('draw_canvas');
+const clearCanvasBtn = document.getElementById('clean_btn');
 const ctx = drawCanvas.getContext('2d');
-
-window.addEventListener('load', () => {
-  document.addEventListener('mousedown', startDrawing);
-  document.addEventListener('mouseup', stopDrawing);
-  document.addEventListener('mousemove', drawAtCanvas);
-});
 
 let getPosition = (event) => {
   mouseCoords.x = event.clientX - drawCanvas.offsetLeft;
@@ -38,3 +33,16 @@ let drawAtCanvas = (event) => {
   ctx.lineTo(mouseCoords.x, mouseCoords.y);
   ctx.stroke();
 };
+
+let cleanCanvas = () => {
+  ctx.beginPath();
+  ctx.clearRect(0, 0, drawCanvas.width, drawCanvas.height);
+};
+
+window.addEventListener('load', () => {
+  document.addEventListener('mousedown', startDrawing);
+  document.addEventListener('mouseup', stopDrawing);
+  document.addEventListener('mousemove', drawAtCanvas);
+});
+
+clearCanvasBtn.addEventListener('click', cleanCanvas);
