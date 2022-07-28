@@ -17,14 +17,14 @@ main {
   gap: 15px;
   flex-direction: column;
   align-items: center;
-  height: 330px;
+  height: 450px;
   width: 350px;
   border-radius: 10px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 #draw_canvas {
-  border: solid 2px gray;
+  border: 2px solid gray;
   border-radius: 10px;
   background-color: black;
 }
@@ -41,4 +41,13 @@ main {
   background-color: white;
   color: #1976d2;
   transition: all 0.3s ease-in-out;
+}
+
+#prediction {
+  border: 2px solid gray;
+  border-radius: 10px;
+  width: 52px;
+  height: 52px;
+  font-size: 35px;
+  text-align: center;
 }

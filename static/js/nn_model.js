@@ -13,7 +13,7 @@ function predict(rawCanvas) {
     const image = preprocessImage(rawCanvas);
     const scores = window.model.predict(image).dataSync();
     let prediction = scores.indexOf(Math.max(...scores));
-    console.log(`Predicted value: ${prediction}`);
+    return prediction;
   }
 }
 

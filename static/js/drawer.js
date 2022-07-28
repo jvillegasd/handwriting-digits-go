@@ -5,6 +5,7 @@ const STROKE_STYLE = 'white';
 const mouseCoords = { x: 0, y: 0 };
 const drawCanvas = document.getElementById('draw_canvas');
 const clearCanvasBtn = document.getElementById('clean_btn');
+const predictionSpan = document.getElementById('prediction');
 const ctx = drawCanvas.getContext('2d');
 
 let getPosition = (event) => {
@@ -19,7 +20,8 @@ let startDrawing = (event) => {
 
 let stopDrawing = (event) => {
   canDraw = false;
-  predict(event.target);
+  const prediction = predict(event.target);
+  predictionSpan.innerHTML = (prediction !== undefined) ? prediction.toString() : '-';
 };
 
 let drawAtCanvas = (event) => {
@@ -38,6 +40,7 @@ let drawAtCanvas = (event) => {
 let cleanCanvas = () => {
   ctx.beginPath();
   ctx.clearRect(0, 0, drawCanvas.width, drawCanvas.height);
+  predictionSpan.innerHTML = '-';
 };
 
 window.addEventListener('load', () => {
