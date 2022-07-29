@@ -2,7 +2,7 @@ const preprocessImage = (rawCanvas) => {
   let tensor = tf.browser
     .fromPixels(rawCanvas, numChannels=1)
     .resizeNearestNeighbor([28, 28])
-    .reshape([1, 28 * 28])
+    .reshape([1, 28, 28, 1])
     .toFloat();
   
   return tensor.div(255.0);
