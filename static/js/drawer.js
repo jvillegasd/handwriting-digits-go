@@ -1,5 +1,5 @@
 let canDraw = false;
-const LINE_WIDTH = 10;
+const LINE_WIDTH = 14;
 const LINE_CAP = 'round';
 const STROKE_STYLE = 'white';
 const mouseCoords = { x: 0, y: 0 };
